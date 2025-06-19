@@ -1,6 +1,6 @@
 # Esther Wambui Portfolio
 
-![Portfolio Screenshot](assets/screenshot.png)
+![Portfolio Screenshot](assets/Screenshot%20from%202025-06-14%2014-02-35.png)
 
 Hi! I'm Esther Wambui, a **Frontend Developer** based in Nairobi, Kenya. This portfolio showcases my skills and projects in building responsive, user-friendly websites.
 
