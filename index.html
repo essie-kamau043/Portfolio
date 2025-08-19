@@ -7,11 +7,16 @@
     <meta name="keywords" content="frontend developer, web developer, Nairobi, portfolio, Esther Wambui">
     <meta name="author" content="Esther Wambui">
     <title>Esther Wambui | Frontend Developer Portfolio</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/b022f92617.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+    
 </head>
 <body>
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
     <header>
         <nav>
             <div class="nav-container">
@@ -26,6 +31,9 @@
                     <a href="#services">Services</a>
                     <a href="#contact">Contact</a>
                 </div>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
                 <i class="fa-solid fa-bars hamburg" aria-label="Open Menu"></i>
                 <div class="dropdown">
                     <div class="links">
@@ -44,39 +52,43 @@
 
     <main>
         <section id="home">
+            <div class="particles" id="particles"></div>
             <div class="main-container">
                 <div class="content">
                     <h1>Hey, I'm <span>Esther Wambui</span></h1>
                     <div class="typewriter">
-                        I'm a <span class="typewriter-text" data-text='["Frontend Developer", "UI/UX Designer", "Web Developer"]'></span>
+                        I'm a <span class="typewriter-text" id="typewriter"></span>
                     </div>
                     <p>Frontend Developer based in Nairobi, Kenya. I craft user-friendly, responsive, and visually appealing websites to deliver seamless digital experiences.</p>
                     <div class="social-links">
                         <a href="https://github.com/essie-kamau043" target="_blank" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/esther-kamau-92103128a/" target="_blank" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="mailto:essie.k004@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="tel:+254741089724" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
                     </div>
                     <div class="btn">
                         <a href="#contact" class="hire-me-btn">Hire Me</a>
-                        <a href="assets/Esther-Wambui--Resume (1).pdf" download class="download-cv-btn">Download CV</a>
+                        <a href="#" class="download-cv-btn" onclick="downloadCV()">Download CV</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="assets/WhatsApp Image 2025-03-19 at 15.50.08.jpeg" alt="Esther Wambui working on a laptop" />
+                    <img src="/assets/fronend girl.jpeg" alt="Esther Wambui working on a laptop" />
                 </div>
             </div>
         </section>
 
         <section id="about">
             <div class="about-container">
-                <h1>About Me</h1>
+                <h1 class="fade-in">About Me</h1>
                 <div class="about-content">
-                    <div class="about-text">
-                        <p>Hi! I'm Esther Wambui, a passionate Frontend Developer from Nairobi, Kenya. I specialize in building responsive, user-friendly websites using HTML, CSS, JavaScript, and frameworks like React and Bootstrap.</p>
-                        <p>With over a year of experience, I’ve worked on projects like e-commerce platforms and landing pages, blending functionality with aesthetic design. I’m always learning the latest trends to deliver cutting-edge solutions.</p>
-                        <p>When I’m not coding, I’m hiking Nairobi’s trails or cooking up new recipes. Let’s create something amazing together!</p>
+                    <div class="about-text fade-in">
+                        <p>Hi! I'm Esther Wambui, a passionate Frontend Developer from Nairobi, Kenya. I specialize in building responsive, user-friendly websites using modern technologies like HTML5, CSS3, JavaScript ES6+, and frameworks like React and Bootstrap.</p>
+                        <p>With over a year of hands-on experience, I've developed a keen eye for detail and a deep understanding of user experience principles. I've worked on diverse projects including e-commerce platforms, portfolio websites, and interactive web applications, always focusing on clean code and optimal performance.</p>
+                        <p>My journey in web development started with a curiosity for creating beautiful digital experiences. Today, I'm committed to staying at the forefront of technology trends, constantly learning new tools and techniques to deliver cutting-edge solutions that exceed client expectations.</p>
+                        <p>When I'm not coding, you'll find me exploring Nairobi's scenic hiking trails, experimenting with new cooking recipes, or contributing to open-source projects. I believe in the power of technology to solve real-world problems and create meaningful connections.</p>
                     </div>
-                    <div class="about-image">
-                        <img src="assets/fronend girl.jpeg" alt="Esther Wambui portrait" />
+                    <div class="about-image fade-in">
+                        <img src="/assets/WhatsApp Image 2025-03-19 at 15.50.08.jpeg" alt="Esther Wambui portrait" />
                     </div>
                 </div>
             </div>
@@ -84,37 +96,43 @@
 
         <section id="skills">
             <div class="skills-container">
-                <h1>My Skills</h1>
+                <h1 class="fade-in">My Skills</h1>
                 <div class="skills-content">
-                    <div class="skill">
+                    <div class="skill fade-in">
                         <i class="fa-brands fa-html5" aria-hidden="true"></i>
-                        <h3>HTML</h3>
-                        <div class="progress-bar" style="--progress: 90%"></div>
+                        <h3>HTML5</h3>
+                        <div class="progress-bar" style="--progress: 95%"></div>
+                        <p style="margin-top: 0.5rem; color: var(--text-light);">Semantic markup & accessibility</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill fade-in">
                         <i class="fa-brands fa-css3-alt" aria-hidden="true"></i>
-                        <h3>CSS</h3>
-                        <div class="progress-bar" style="--progress: 85%"></div>
+                        <h3>CSS3</h3>
+                        <div class="progress-bar" style="--progress: 90%"></div>
+                        <p style="margin-top: 0.5rem; color: var(--text-light);">Advanced styling & animations</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill fade-in">
                         <i class="fa-brands fa-js" aria-hidden="true"></i>
                         <h3>JavaScript</h3>
-                        <div class="progress-bar" style="--progress: 80%"></div>
+                        <div class="progress-bar" style="--progress: 85%"></div>
+                        <p style="margin-top: 0.5rem; color: var(--text-light);">ES6+ & DOM manipulation</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill fade-in">
                         <i class="fa-brands fa-react" aria-hidden="true"></i>
                         <h3>React</h3>
-                        <div class="progress-bar" style="--progress: 75%"></div>
+                        <div class="progress-bar" style="--progress: 80%"></div>
+                        <p style="margin-top: 0.5rem; color: var(--text-light);">Hooks & component architecture</p>
                     </div>
-                    <div class="skill">
+                    <div class="skill fade-in">
                         <i class="fa-brands fa-bootstrap" aria-hidden="true"></i>
                         <h3>Bootstrap</h3>
                         <div class="progress-bar" style="--progress: 85%"></div>
+                        <p style="margin-top: 0.5rem; color: var(--text-light);">Responsive grid systems</p>
                     </div>
-                    <div class="skill">
-                        <i class="fa-solid fa-pen-nib" aria-hidden="true"></i>
+                    <div class="skill fade-in">
+                        <i class="fa-brands fa-figma" aria-hidden="true"></i>
                         <h3>Figma</h3>
-                        <div class="progress-bar" style="--progress: 70%"></div>
+                        <div class="progress-bar" style="--progress: 75%"></div>
+                        <p style="margin-top: 0.5rem; color: var(--text-light);">UI/UX design & prototyping</p>
                     </div>
                 </div>
             </div>
@@ -122,51 +140,76 @@
 
         <section id="projects">
             <div class="projects-container">
-                <h1>My Projects</h1>
+                <h1 class="fade-in">My Projects</h1>
                 <div class="projects-content">
-                    <div class="project">
-                        <img src="assets/project1.jpg" alt="E-commerce Platform" />
-                        <h3>E-commerce Platform</h3>
-                        <p>A fully responsive online store built with React and Bootstrap, featuring product filtering and payment integration.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/essie-kamau043/ecommerce" target="_blank">View Code</a>
-                            <a href="https://example.com/ecommerce" target="_blank">Live Demo</a>
+                    <div class="project fade-in">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=200&fit=crop" alt="E-commerce Platform" />
+                        <div class="project-content">
+                            <h3>E-commerce Platform</h3>
+                            <p>A fully responsive online store built with React and Bootstrap, featuring product filtering, shopping cart functionality, and secure payment integration.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/essie-kamau043/ecommerce" target="_blank">View Code</a>
+                                <a href="#" target="_blank">Live Demo</a>
+                            </div>
                         </div>
                     </div>
-                    <div class="project">
-                        <img src="assets/Screenshot from 2025-06-14 14-02-35.png" alt="Portfolio Website" />
-                        <h3>Portfolio Website</h3>
-                        <p>A personal portfolio showcasing my skills and projects, built with HTML, CSS, and JavaScript.</p>
-                        <div class="project-links">
-                            <a href="https://github.com/essie-kamau043/Portfolio" target="_blank">View Code</a>
-                            <a href="https://esther-wambui-portfolio.netlify.app/" target="_blank">Live Demo</a>
+                    <div class="project fade-in">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=400&h=200&fit=crop" alt="Portfolio Website" />
+                        <div class="project-content">
+                            <h3>Portfolio Website</h3>
+                            <p>A modern, responsive portfolio showcasing my skills and projects, built with HTML5, CSS3, and vanilla JavaScript with smooth animations.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/essie-kamau043/Portfolio" target="_blank">View Code</a>
+                                <a href="https://esther-wambui-portfolio.netlify.app/" target="_blank">Live Demo</a>
+                            </div>
                         </div>
                     </div>
-                    <!-- Add more projects as needed -->
+                    <div class="project fade-in">
+                        <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=200&fit=crop" alt="BMI Calculator" />
+                        <div class="project-content">
+                            <h3>BMI Calculator</h3>
+                            <p>An interactive health tool that calculates Body Mass Index with visual feedback and health recommendations, built with vanilla JavaScript.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/essie-kamau043/BMI-Calculator" target="_blank">View Code</a>
+                                <a href="https://essie-kamau043.github.io/BMI-Calculator/" target="_blank">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project fade-in">
+                        <img src="https://images.unsplash.com/photo-1518199266791-5375a83190b7?w=400&h=200&fit=crop" alt="Love Calculator" />
+                        <div class="project-content">
+                            <h3>Love Calculator</h3>
+                            <p>A fun, interactive web application that calculates compatibility percentages with engaging animations and responsive design.</p>
+                            <div class="project-links">
+                                <a href="https://github.com/essie-kamau043/Love-Calculator" target="_blank">View Code</a>
+                                <a href="https://essie-kamau043.github.io/Love-Calculator/" target="_blank">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="services">
             <div class="services-container">
-                <h1>My Services</h1>
+                <h1 class="fade-in">My Services</h1>
                 <div class="services-content">
-                    <div class="service">
+                    <div class="service fade-in">
                         <i class="fa-solid fa-code" aria-hidden="true"></i>
                         <h3>Web Development</h3>
-                        <p>Building responsive, fast, and user-friendly websites using HTML, CSS, JavaScript, and React for seamless digital experiences.</p>
+                        <p>Building responsive, fast, and user-friendly websites using modern technologies like HTML5, CSS3, JavaScript, and React for seamless digital experiences.</p>
                         <a href="#contact" class="service-btn">Get Started</a>
                     </div>
-                    <div class="service">
+                    <div class="service fade-in">
                         <i class="fa-solid fa-palette" aria-hidden="true"></i>
                         <h3>UI/UX Design</h3>
-                        <p>Designing intuitive interfaces and prototypes with Figma and Adobe XD to enhance user experience and brand identity.</p>
+                        <p>Designing intuitive interfaces and interactive prototypes with Figma to enhance user experience and strengthen brand identity.</p>
                         <a href="#contact" class="service-btn">Get Started</a>
                     </div>
-                    <div class="service">
+                    <div class="service fade-in">
                         <i class="fa-solid fa-wrench" aria-hidden="true"></i>
                         <h3>Website Maintenance</h3>
-                        <p>Providing ongoing support, updates, and optimization to keep your website running smoothly and securely.</p>
+                        <p>Providing ongoing support, security updates, performance optimization, and content management to keep your website running smoothly.</p>
                         <a href="#contact" class="service-btn">Get Started</a>
                     </div>
                 </div>
@@ -175,18 +218,26 @@
 
         <section id="contact">
             <div class="contact-container">
-                <h1>Contact Me</h1>
+                <h1 class="fade-in">Contact Me</h1>
                 <div class="contact-content">
-                    <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+                    <form id="contact-form" class="fade-in">
                         <input type="text" name="name" placeholder="Your Name" required aria-label="Name">
                         <input type="email" name="email" placeholder="Your Email" required aria-label="Email">
                         <textarea name="message" placeholder="Your Message" required aria-label="Message"></textarea>
                         <button type="submit">Send Message</button>
                     </form>
-                    <div class="contact-info">
+                    <div class="contact-info fade-in">
+                        <h3 style="margin-bottom: 1.5rem; color: var(--text-primary);">Let's Connect</h3>
                         <p><i class="fa-solid fa-envelope"></i> essie.k004@gmail.com</p>
                         <p><i class="fa-solid fa-phone"></i> +254 741089724</p>
                         <p><i class="fa-solid fa-map-marker-alt"></i> Nairobi, Kenya</p>
+                        <div style="margin-top: 2rem;">
+                            <h4 style="margin-bottom: 1rem; color: var(--text-primary);">Follow Me</h4>
+                            <div class="social-links">
+                                <a href="https://github.com/essie-kamau043" target="_blank" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/esther-kamau-92103128a/" target="_blank" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -195,7 +246,7 @@
 
     <footer>
         <div class="footer-container">
-            <p>&copy; 2025 Esther Wambui. All rights reserved.</p>
+            <p>&copy; 2025 Esther Wambui. All rights reserved. Made with ❤️ in Nairobi</p>
             <div class="social-links">
                 <a href="https://github.com/essie-kamau043" target="_blank" aria-label="GitHub Profile"><i class="fa-brands fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/esther-kamau-92103128a/" target="_blank" aria-label="LinkedIn Profile"><i class="fa-brands fa-linkedin"></i></a>
