@@ -731,6 +731,28 @@ section { padding: 7rem 0; }
     transition: var(--transition);
 }
 .overlay-btn:hover { background: #f9a8d4; transform: scale(1.05); }
+
+/* Mobile: show buttons below image instead of as overlay */
+@media (max-width: 768px) {
+    .project-overlay {
+        position: static;
+        opacity: 1;
+        background: transparent;
+        justify-content: flex-start;
+        padding: 0.75rem 1.5rem 0;
+        gap: 0.75rem;
+    }
+    .project-img { overflow: visible; }
+    .project-card:hover .project-img img { transform: none; }
+    .overlay-btn {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+        background: transparent;
+        color: var(--accent);
+        border: 1px solid var(--accent);
+    }
+    .overlay-btn:hover { background: var(--accent); color: #0a0a0a; }
+}
 .project-info { padding: 1.5rem; }
 .project-tags {
     display: flex;
